@@ -27,6 +27,10 @@ class RoomClassifier:
     #vectorizer = TfidfVectorizer(max_df=1.0, stop_words='english')
     self.vectorizer = TfidfVectorizer()
 
+    # If we want to give all features and all labels to training (leaving no unique test cases), then uncomment below
+    #features_train = features_for_each_label
+    #labels_train = labels_shuffled
+
     features_train_vectorized = self.vectorizer.fit_transform(features_train)
     self.features_test_vectorized  = self.vectorizer.transform(features_test)
 
@@ -34,7 +38,7 @@ class RoomClassifier:
     #print "vector: ",vector
     print(features_train_vectorized.shape)
     print(self.features_test_vectorized.shape)
-    self.vectorizer.get_feature_names_out()
+    print(self.vectorizer.get_feature_names_out())
 
 
     # Finally learn and test how good model have we got
