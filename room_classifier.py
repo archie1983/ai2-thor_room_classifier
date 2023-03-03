@@ -66,6 +66,8 @@ class RoomClassifier:
     print("Predicted Class for Elem 10:",self.pred[10]," Class for Elem 8:",self.pred[8]," Class for elem 5:", self.pred[5])
 
     print("Real Class for Elem 10:",labels_test[10]," Real Class for Elem 8:",labels_test[8]," Real Class for elem 5:", labels_test[5])
+    
+    print(self.clf.classes_)
     #########################################################
 
   def predict(self, items_as_string_separated_by_space):
@@ -83,5 +85,7 @@ rc.predict("Egg")
 #rc.predict("SinkBasin CounterTop SoapBar ToiletPaperHanger ToiletPaper SprayBottle Floor GarbageCan Candle Plunger ScrubBrush Toilet Sink HandTowelHolder Faucet Mirror Cloth Towel Drawer SoapBottle ShowerHead HandTowel LightSwitch ShowerDoor TowelHolder ShowerGlass")
 #rc.predict("Candle Plunger ScrubBrush Toilet Sink HandTowelHolder SoapBottle")
 rc.predict("Candle Plunger ScrubBrush Toilet")
+rc.predict("TV Sofa")
+rc.predict("ScrubBrush ToiletCandle Plunger")
 
 
